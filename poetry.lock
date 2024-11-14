@@ -54,6 +54,20 @@ files = [
 ]
 
 [[package]]
+name = "asyncio-atexit"
+version = "1.0.1"
+description = "Like atexit, but for asyncio"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "asyncio-atexit-1.0.1.tar.gz", hash = "sha256:1d0c71544b8ee2c484d322844ee72c0875dde6f250c0ed5b6993592ab9f7d436"},
+    {file = "asyncio_atexit-1.0.1-py3-none-any.whl", hash = "sha256:d93d5f7d5633a534abd521ce2896ed0fbe8de170bb1e65ec871d1c20eac9d376"},
+]
+
+[package.extras]
+test = ["pytest", "uvloop"]
+
+[[package]]
 name = "black"
 version = "24.10.0"
 description = "The uncompromising code formatter."
@@ -779,19 +793,20 @@ files = [
 
 [[package]]
 name = "zendriver"
-version = "0.1.1"
+version = "0.1.3"
 description = "A blazing fast, async-first, undetectable webscraping/web automation framework"
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "zendriver-0.1.1-py3-none-any.whl", hash = "sha256:cf227045caf1fd55f5f5150ab22c274d8a6766854604ca811ecb8359e6477b0f"},
-    {file = "zendriver-0.1.1.tar.gz", hash = "sha256:229a004f85b5dfedccee573a46fd25f772630458c418a6da2d3d6f82f1a3521f"},
+    {file = "zendriver-0.1.3-py3-none-any.whl", hash = "sha256:cc6d458436a9a9bbb56d6114e0c916e5196322fef5568c88ea18ecc8c0f6b535"},
+    {file = "zendriver-0.1.3.tar.gz", hash = "sha256:9e7e6bd14008bd4665d3b90750eca872d7150ebdc993960e2eca8fd81a23e9e5"},
 ]
 
 [package.dependencies]
+asyncio-atexit = ">=1.0.1"
 deprecated = ">=1.2.14"
 mss = ">=9.0.2"
-websockets = ">=13.1"
+websockets = ">=13.1,<14"
 
 [metadata]
 lock-version = "2.0"
